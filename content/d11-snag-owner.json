@@ -1,0 +1,16 @@
+{
+  "id": "d11-snag-owner",
+  "kind": "device",
+  "mark": "SITE \u00b7 SNAGS",
+  "headline": "Every snag has\n*an owner and a date.*",
+  "headlineSize": 96,
+  "sub": "Logged with a photo, assigned to one person, and tracked until it's verified.",
+  "media": {
+    "img": "assets/screens/04-snags.png",
+    "y0": 0,
+    "y1": 1450,
+    "width": 760
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

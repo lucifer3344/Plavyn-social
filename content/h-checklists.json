@@ -1,0 +1,15 @@
+{
+  "id": "h-checklists",
+  "kind": "device",
+  "formats": [
+    "story"
+  ],
+  "storyMark": "HIGHLIGHT \u00b7 CHECKLISTS",
+  "headline": "Pass. Fail. N/A.\n*Then a snag.*",
+  "sub": "Pre-pour, waterproofing, fire safety and handover checklists. A failed check raises a snag in one tap.",
+  "media": {
+    "img": "assets/screens/checklist-detail-prepour.png",
+    "y0": 150,
+    "width": 760
+  }
+}

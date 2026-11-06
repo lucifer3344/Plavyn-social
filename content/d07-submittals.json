@@ -1,0 +1,15 @@
+{
+  "id": "d07-submittals",
+  "kind": "device",
+  "mark": "SITE \u00b7 SUBMITTALS",
+  "headline": "Shop drawings,\n*to a decision.*",
+  "sub": "Follow every submittal, sample and method statement from sent to approved.",
+  "media": {
+    "img": "assets/screens/10-submittals.png",
+    "y0": 0,
+    "y1": 1720,
+    "width": 760
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

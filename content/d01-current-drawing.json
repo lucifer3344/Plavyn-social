@@ -1,0 +1,16 @@
+{
+  "id": "d01-current-drawing",
+  "kind": "device",
+  "mark": "DRAWINGS \u00b7 REV C",
+  "headline": "Which drawing\nis current?\n*The one on top.*",
+  "headlineSize": 96,
+  "sub": "Every revision stays together. The current one opens first, marked with its status.",
+  "media": {
+    "img": "assets/screens/03-drawings.png",
+    "y0": 0,
+    "y1": 1150,
+    "width": 820
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

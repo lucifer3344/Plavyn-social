@@ -1,0 +1,16 @@
+{
+  "id": "h-drawings",
+  "kind": "device",
+  "formats": [
+    "story"
+  ],
+  "storyMark": "HIGHLIGHT \u00b7 DRAWINGS",
+  "headline": "Every sheet.\n*The current one.*",
+  "sub": "Drawing sets by floor, every revision kept together, the latest always on top.",
+  "media": {
+    "img": "assets/screens/03-drawings.png",
+    "y0": 0,
+    "y1": 1150,
+    "width": 820
+  }
+}

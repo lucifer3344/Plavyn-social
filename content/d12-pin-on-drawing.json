@@ -1,0 +1,16 @@
+{
+  "id": "d12-pin-on-drawing",
+  "kind": "device",
+  "mark": "DRAWINGS \u00b7 PINS",
+  "headline": "Mark the exact spot.\n*On the drawing.*",
+  "headlineSize": 96,
+  "sub": "Tap a point on the sheet to log a snag or raise an RFI right where the problem is.",
+  "media": {
+    "img": "assets/screens/pin-chooser.png",
+    "y0": 60,
+    "y1": 1990,
+    "width": 640
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

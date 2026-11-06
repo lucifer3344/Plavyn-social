@@ -1,0 +1,17 @@
+{
+  "id": "h-updates",
+  "kind": "list",
+  "formats": [
+    "story"
+  ],
+  "storyMark": "HIGHLIGHT \u00b7 UPDATES",
+  "headline": "What's new\n*in Plavyn.*",
+  "sub": "The latest release, in short.",
+  "items": [
+    "Home Screen and Lock Screen widgets",
+    "Sign in with your Microsoft account",
+    "One tap to log a snag or a task",
+    "Compare two revisions in Overlay or Slide view",
+    "Measure on the sheet in feet-inches or metric"
+  ]
+}

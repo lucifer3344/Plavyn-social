@@ -1,0 +1,29 @@
+{
+  "id": "d13-my-day",
+  "kind": "widgets",
+  "mark": "WIDGETS \u00b7 MY DAY",
+  "headline": "Your day,\n*before you unlock.*",
+  "sub": "What's yours today, and the weather on site, right on your Home Screen.",
+  "media": [
+    {
+      "img": "assets/widgets/02-my-day-medium.png",
+      "x0": 72,
+      "x1": 1086,
+      "y0": 72,
+      "y1": 546,
+      "width": 840,
+      "radius": 54
+    },
+    {
+      "img": "assets/widgets/11-site-day-medium.png",
+      "x0": 72,
+      "x1": 1086,
+      "y0": 72,
+      "y1": 546,
+      "width": 840,
+      "radius": 54
+    }
+  ],
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

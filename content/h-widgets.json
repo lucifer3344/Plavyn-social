@@ -1,0 +1,21 @@
+{
+  "id": "h-widgets",
+  "kind": "widgets",
+  "formats": [
+    "story"
+  ],
+  "storyMark": "HIGHLIGHT \u00b7 WIDGETS",
+  "headline": "Your site,\n*at a glance.*",
+  "sub": "Snags to verify, failed checks and what's due next, on your Home Screen.",
+  "media": [
+    {
+      "img": "assets/widgets/08-project-summary-large.png",
+      "x0": 72,
+      "x1": 1086,
+      "y0": 72,
+      "y1": 1134,
+      "width": 820,
+      "radius": 52
+    }
+  ]
+}

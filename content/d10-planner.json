@@ -1,0 +1,19 @@
+{
+  "id": "d10-planner",
+  "kind": "device",
+  "mark": "PLANNER \u00b7 PHASES",
+  "headline": "Phases and progress,\n*against the plan.*",
+  "headlineSize": 84,
+  "sub": "Foundations to handover, with an owner for every phase.",
+  "media": {
+    "img": "assets/screens/ipad-planner.png",
+    "x0": 0,
+    "x1": 2000,
+    "y0": 0,
+    "y1": 1100,
+    "width": 900,
+    "radius": 36
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

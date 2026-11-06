@@ -1,0 +1,14 @@
+{
+  "id": "d06-diary",
+  "kind": "device",
+  "mark": "DIARY \u00b7 DAILY",
+  "headline": "The site diary,\n*kept every day.*",
+  "sub": "What was poured, who visited, what was inspected. Typed or handwritten, and searchable later.",
+  "media": {
+    "img": "assets/screens/12-diary.png",
+    "y0": 0,
+    "width": 720
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

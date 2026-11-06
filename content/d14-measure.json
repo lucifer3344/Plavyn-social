@@ -1,0 +1,16 @@
+{
+  "id": "d14-measure",
+  "kind": "device",
+  "mark": "DRAWINGS \u00b7 MEASURE",
+  "headline": "Measure on the sheet.\n*Feet-inches or metric.*",
+  "headlineSize": 80,
+  "sub": "Set the scale by typing one real length, then measure anything on the drawing.",
+  "media": {
+    "img": "assets/screens/measure.png",
+    "y0": 150,
+    "y1": 2760,
+    "width": 600
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

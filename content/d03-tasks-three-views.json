@@ -1,0 +1,19 @@
+{
+  "id": "d03-tasks-three-views",
+  "kind": "device",
+  "mark": "TASKS \u00b7 iPAD",
+  "headline": "One task list.\n*Three ways to see it.*",
+  "headlineSize": 96,
+  "sub": "List, Board and Schedule views of the same tasks, shared with the whole team.",
+  "media": {
+    "img": "assets/screens/ipad-tasks-board.png",
+    "x0": 0,
+    "x1": 1900,
+    "y0": 0,
+    "y1": 1350,
+    "width": 900,
+    "radius": 36
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "h-snags",
+  "kind": "device",
+  "formats": [
+    "story"
+  ],
+  "storyMark": "HIGHLIGHT \u00b7 SNAGS",
+  "headline": "Nothing closes\n*until it's fixed.*",
+  "sub": "The person who raised the snag verifies the fix. Not fixed? It reopens.",
+  "media": {
+    "img": "assets/screens/16-snag-signoff.png",
+    "y0": 930,
+    "width": 760
+  }
+}

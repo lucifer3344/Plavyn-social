@@ -1,0 +1,15 @@
+{
+  "id": "d09-team",
+  "kind": "device",
+  "mark": "TEAM \u00b7 ACCESS",
+  "headline": "Everyone on the project.\n*The right access for each.*",
+  "headlineSize": 76,
+  "sub": "Invite your team and consultants, assign work to anyone, and limit a contractor to specific wings.",
+  "media": {
+    "img": "assets/screens/11-team.png",
+    "y0": 0,
+    "width": 720
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "d04-rfis",
+  "kind": "device",
+  "mark": "SITE \u00b7 RFIs",
+  "headline": "Ask once.\n*Answer on record.*",
+  "sub": "Raise an RFI, send it to the consultant, and track it until it's answered.",
+  "media": {
+    "img": "assets/screens/05-rfis.png",
+    "y0": 0,
+    "y1": 1300,
+    "width": 820
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED \u00b7 @PLAVYN_1"
+}
