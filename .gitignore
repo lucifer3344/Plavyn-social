@@ -1,1 +1,3 @@
 node_modules/
+reels/out/*-video.mp4
+reels/out/*.wav

@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:500;src:url(../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:Cond;font-weight:500;src:url(../node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-500-normal.woff2)}
+:root{--ink:#1D1F1F;--paper:#F3F3F1;--teal:#80BCC5;--muted:#A9B4B6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1920px;overflow:hidden;background:var(--ink);color:var(--paper);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(128,188,197,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(128,188,197,.15) 1px,transparent 1px),linear-gradient(rgba(128,188,197,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(128,188,197,.075) 1px,transparent 1px);background-size:180px 180px,180px 180px,36px 36px,36px 36px}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(29,31,31,0) 0%,rgba(29,31,31,.65) 100%)}
+.datum{position:absolute;top:0;bottom:0;left:64px;width:8px;background:var(--teal)}
+.brand{position:absolute;left:112px;top:150px;display:flex;align-items:center;gap:16px}
+.brand svg{width:52px;height:52px}.brand span{font-size:28px;font-weight:600}
+.mark{position:absolute;right:72px;top:166px;font-family:Cond;font-weight:500;letter-spacing:.16em;color:var(--teal);font-size:24px;text-transform:uppercase}
+#head{position:absolute;left:108px;top:240px;width:900px;font-weight:800;font-size:76px;letter-spacing:-.04em;line-height:1}
+#head .t{color:var(--teal)}
+#phone{position:absolute;left:252px;top:470px;width:576px;height:1220px;border-radius:84px;background:#0a0b0b;box-shadow:0 0 0 2px #3a3f3f,0 50px 120px rgba(0,0,0,.65)}
+#screen{position:absolute;inset:14px;border-radius:70px;overflow:hidden;background:#fff}
+.scr{position:absolute;left:0;top:0;width:100%;height:100%;will-change:transform}
+.scr img{display:block;width:100%}
+.shade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+#hl{position:absolute;border:5px solid var(--teal);border-radius:22px;box-shadow:0 0 0 9999px rgba(29,31,31,.0);opacity:0}
+#finger{position:absolute;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:rgba(255,255,255,.55);border:3px solid rgba(255,255,255,.9);box-shadow:0 6px 24px rgba(0,0,0,.35);opacity:0}
+#ripple{position:absolute;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;border:4px solid var(--teal);opacity:0}
+#cap{position:absolute;left:0;right:0;top:1490px;display:flex;justify-content:center;opacity:0}
+#cap span{background:var(--paper);color:var(--ink);font-weight:600;font-size:36px;padding:20px 34px;border-radius:999px;box-shadow:0 20px 50px rgba(0,0,0,.45);letter-spacing:-.01em}
+#end{position:absolute;inset:0;background:var(--ink);opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;text-align:center}
+#end .logo svg{width:180px;height:180px}
+#end h2{font-weight:800;font-size:92px;letter-spacing:-.045em;line-height:1;padding:0 80px}
+#end h2 .t{color:var(--teal)}
+#end p{font-family:Cond;font-weight:500;letter-spacing:.18em;color:var(--teal);font-size:32px;text-transform:uppercase}
+</style></head><body>
+<div class="grid"></div><div class="vig"></div><div class="datum"></div>
+<div class="brand"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#1b1e1d" stroke="#3a3f3e" stroke-width="2"/><path d="M30 78 V22 H58 C68 22 76 29 76 39 C76 49 68 56 58 56 H30" fill="none" stroke="#f3f4f1" stroke-width="7" stroke-linecap="square"/><path d="M30 22 V78" fill="none" stroke="#7cbcc4" stroke-width="7" stroke-linecap="square"/></svg><span>Plavyn</span></div>
+<div class="mark" id="mark"></div>
+<div id="head"></div>
+<div id="stage" style="position:absolute;inset:0;transform-origin:540px 470px;transform:scale(1.3)"><div id="phone"><div id="screen"></div></div>
+<div id="hl"></div><div id="ripple"></div><div id="finger"></div></div>
+<div id="cap"><span id="capt"></span></div>
+<div id="end"><div class="logo"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#1b1e1d" stroke="#3a3f3e" stroke-width="2"/><path d="M30 78 V22 H58 C68 22 76 29 76 39 C76 49 68 56 58 56 H30" fill="none" stroke="#f3f4f1" stroke-width="7" stroke-linecap="square"/><path d="M30 22 V78" fill="none" stroke="#7cbcc4" stroke-width="7" stroke-linecap="square"/></svg></div><h2 id="endh"></h2><p id="endp"></p></div>
+<script>
+// Phone screen: 548 x 1224 css px shows a 1320 x 2868 screenshot whole (scale ~0.4152)
+const SW = 548, SRC = 1320, K = SW / SRC;
+const PX = 252 + 14, PY = 470 + 14; // screen origin on the page
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const ease = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const prog = (t, a, d) => ease(clamp((t - a) / d, 0, 1));
+let R, built = false;
+function setup(reel) {
+  R = reel;
+  document.getElementById('mark').textContent = R.mark;
+  document.getElementById('head').innerHTML = R.headline;
+  document.getElementById('endh').innerHTML = R.end;
+  document.getElementById('endp').textContent = R.endSub || 'Plavyn · iPad and iPhone';
+  const s = document.getElementById('screen');
+  R.screens.forEach((sc, i) => {
+    const d = document.createElement('div'); d.className = 'scr'; d.id = 'sc' + i;
+    d.innerHTML = `<img src="../${sc.img}"><div class="shade"></div>`; s.appendChild(d);
+  });
+  return new Promise(r => { const imgs = [...document.images]; let n = 0; imgs.forEach(im => im.complete ? (++n === imgs.length && r()) : im.onload = () => (++n === imgs.length && r())); if (!imgs.length) r(); });
+}
+function render(t) {
+  // intro: phone rises
+  const intro = prog(t, 0, 0.9);
+  const phone = document.getElementById('phone');
+  phone.style.transform = `translateY(${(1 - intro) * 260}px)`; phone.style.opacity = intro;
+  const head = document.getElementById('head');
+  head.style.opacity = prog(t, 0.2, 0.6); head.style.transform = `translateY(${(1 - prog(t, 0.2, 0.6)) * 30}px)`;
+  // screens
+  R.screens.forEach((sc, i) => {
+    const el = document.getElementById('sc' + i), sh = el.querySelector('.shade');
+    const next = R.screens[i + 1];
+    let x = 0, y = 0, op = 1, shade = 0, vis = t >= (sc.at || 0) - 0.001;
+    if (i > 0 && t < sc.at + 0.45) {
+      const p = prog(t, sc.at, 0.45);
+      if (sc.enter === 'push') x = (1 - p) * 100;
+      if (sc.enter === 'sheet') y = (1 - p) * 100;
+      if (sc.enter === 'fade') op = p;
+    }
+    if (next && t >= next.at) {
+      const p = prog(t, next.at, 0.45);
+      if (next.enter === 'push') x = -30 * p, shade = .25 * p;
+      if (next.enter === 'sheet') shade = .35 * p;
+      if (next.enter === 'fade') op = 1 - p;
+    }
+    // scroll inside a screen: sc.scroll = [{at, d, y(src px)}]
+    let sy = 0; (sc.scroll || []).forEach(s => { sy += s.y * prog(t, s.at, s.d || .6); });
+    el.style.display = vis ? 'block' : 'none';
+    el.style.transform = `translate(${x}%, ${y}%)`; el.style.opacity = op; el.style.zIndex = i;
+    el.querySelector('img').style.transform = `translateY(${-sy * K}px)`;
+    sh.style.opacity = shade;
+  });
+  // finger: keyframes [{t, x, y, tap}] in source px of the screen
+  const F = R.finger, fe = document.getElementById('finger'), rp = document.getElementById('ripple');
+  let fx = F[0].x, fy = F[0].y, fop = 0, scale = 1, rip = null;
+  for (let i = 0; i < F.length; i++) {
+    const k = F[i];
+    if (t >= k.t) { fx = k.x; fy = k.y; fop = k.hide ? 0 : 1; if (k.tap && t < k.t + 0.5) rip = (t - k.t) / 0.5; if (k.tap && t < k.t + 0.25) scale = 0.8; }
+    const n = F[i + 1];
+    if (n && t >= k.t && t < n.t) { const p = prog(t, k.t + (k.tap ? 0.3 : 0), Math.max(0.01, n.t - k.t - (k.tap ? 0.3 : 0))); fx = k.x + (n.x - k.x) * p; fy = k.y + (n.y - k.y) * p; }
+  }
+  const appear = F.length ? clamp((t - F[0].t) / 0.25, 0, 1) : 0;
+  fe.style.opacity = fop * appear; fe.style.left = PX + fx * K + 'px'; fe.style.top = PY + fy * K + 'px'; fe.style.transform = `scale(${scale})`;
+  if (rip !== null) { rp.style.opacity = 1 - rip; rp.style.left = fe.style.left; rp.style.top = fe.style.top; rp.style.transform = `scale(${1 + rip * 1.4})`; } else rp.style.opacity = 0;
+  // highlight box
+  const hl = document.getElementById('hl'); let ho = 0;
+  (R.highlights || []).forEach(h => { if (t >= h.from && t < h.to) { ho = Math.min(prog(t, h.from, .3), 1 - prog(t, h.to - .3, .3)); hl.style.left = PX + h.x * K - 8 + 'px'; hl.style.top = PY + h.y * K - 8 + 'px'; hl.style.width = h.w * K + 16 + 'px'; hl.style.height = h.h * K + 16 + 'px'; } });
+  hl.style.opacity = ho;
+  // captions
+  const cap = document.getElementById('cap'); let co = 0;
+  R.captions.forEach(c => { if (t >= c.from && t < c.to) { co = Math.min(prog(t, c.from, .3), 1 - prog(t, c.to - .3, .3)); document.getElementById('capt').textContent = c.text; cap.style.transform = `translateY(${(1 - prog(t, c.from, .3)) * 24}px)`; } });
+  cap.style.opacity = co;
+  // end card
+  const e = prog(t, R.endAt, 0.6), end = document.getElementById('end');
+  end.style.opacity = e; end.style.transform = `scale(${1.04 - .04 * e})`;
+}
+</script></body></html>
