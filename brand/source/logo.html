@@ -1,0 +1,135 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:600;src:url(../plavyn-social/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(../plavyn-social/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:Cond;font-weight:500;src:url(../plavyn-social/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-500-normal.woff2)}
+@font-face{font-family:Cond;font-weight:600;src:url(../plavyn-social/node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-600-normal.woff2)}
+:root{--ink:#1D1F1F;--paper:#F3F3F1;--teal:#80BCC5}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--ink);overflow:hidden}
+body{position:relative;color:var(--paper);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
+#grid{position:absolute;inset:0}
+#bar{position:absolute;top:0;bottom:0;background:var(--teal);transform-origin:top}
+#lines{position:absolute;inset:0}
+#stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#logo{display:block}
+#word{font-weight:800;letter-spacing:-.045em;line-height:1;display:flex;overflow:hidden;padding:0 .04em .08em}
+#word span{display:inline-block}
+#tag{font-family:Cond;font-weight:600;text-transform:uppercase;display:flex;align-items:center;letter-spacing:.14em;white-space:nowrap}
+#tag span{display:inline-block}
+#tag .t{color:var(--teal)}
+#tag i{font-style:normal;color:#5d6463;display:inline-block}
+.lab{position:absolute;font-family:Cond;font-weight:500;letter-spacing:.16em;color:var(--teal);text-transform:uppercase;white-space:nowrap}
+#handle{position:absolute;left:0;right:0;text-align:center;font-family:Cond;font-weight:500;letter-spacing:.2em;color:var(--teal)}
+#fade{position:absolute;inset:0;background:var(--ink);pointer-events:none}
+</style></head><body>
+<div id="grid"></div>
+<svg id="lines"></svg>
+<div id="bar"></div>
+<div id="stage">
+  <svg id="logo" viewBox="0 0 100 100" overflow="visible">
+    <rect id="lr" x="1" y="1" width="98" height="98" rx="22" fill="#1b1e1d" stroke="#3a3f3e" stroke-width="2"/>
+    <path id="lp" d="M30 78 V22 H58 C68 22 76 29 76 39 C76 49 68 56 58 56 H30" fill="none" stroke="#f3f4f1" stroke-width="7" stroke-linecap="square"/>
+    <path id="ls" d="M30 22 V78" fill="none" stroke="#80BCC5" stroke-width="7" stroke-linecap="square"/>
+  </svg>
+  <div id="word"></div>
+  <div id="tag"></div>
+</div>
+<div class="lab" id="sheet">Sheet A-001</div>
+<div class="lab" id="rev"></div>
+<div id="handle">@PLAVYN_1</div>
+<div id="fade"></div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const p=(t,a,b)=>clamp((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const back=x=>{const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+let W,H,u,land,S={};
+function setup(w,h){
+  W=w;H=h;u=Math.min(w,h)/1080;land=w>h*1.2;
+  document.body.style.width=w+'px';document.body.style.height=h+'px';
+  const $=id=>document.getElementById(id);
+  Object.assign(S,{grid:$('grid'),bar:$('bar'),lines:$('lines'),logo:$('logo'),word:$('word'),tag:$('tag'),sheet:$('sheet'),rev:$('rev'),handle:$('handle'),fade:$('fade'),lr:$('lr'),lp:$('lp'),ls:$('ls')});
+  S.bar.style.left=(land?96:64)*u+'px';S.bar.style.width=8*u+'px';
+  const L=(land?250:270)*u; S.L=L;
+  S.logo.style.width=S.logo.style.height=L+'px';
+  S.word.style.fontSize=(land?150:170)*u+'px';S.word.style.marginTop=(land?28:34)*u+'px';
+  S.word.innerHTML=[...'Plavyn'].map(c=>`<span>${c}</span>`).join('');
+  const parts=['Every drawing.','One version.','Everywhere.'];
+  S.tag.style.fontSize=(land?50:54)*u+'px';S.tag.style.marginTop=(land?40:46)*u+'px';
+  if(land){S.tag.style.flexDirection='row';S.tag.style.gap=22*u+'px';
+    S.tag.innerHTML=parts.map((s,i)=>`<span class="${i==2?'t':''}">${s}</span>`).join(`<i>/</i>`);}
+  else{S.tag.style.flexDirection='column';S.tag.style.gap=6*u+'px';S.tag.style.lineHeight=1.05;
+    S.tag.innerHTML=parts.map((s,i)=>`<span class="${i==2?'t':''}">${s}</span>`).join('');}
+  S.letters=[...S.word.children];S.tparts=[...S.tag.querySelectorAll('span')];S.slashes=[...S.tag.querySelectorAll('i')];
+  [S.sheet,S.rev].forEach(e=>e.style.fontSize=26*u+'px');
+  S.handle.style.fontSize=28*u+'px';S.handle.style.bottom=(land?70:H>W?150:70)*u+'px';
+  // measure final layout
+  const r=S.logo.getBoundingClientRect();S.fx=r.left+r.width/2;S.fy=r.top+r.height/2;
+  for(const id of ['lr','lp','ls']){const e=S[id];const len=e.getTotalLength();e.style.strokeDasharray=len;S[id+'len']=len;}
+  // grid
+  const g1=30*u,g2=150*u;
+  S.grid.style.backgroundImage=`linear-gradient(rgba(128,188,197,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(128,188,197,.10) 1px,transparent 1px),linear-gradient(rgba(243,243,241,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(243,243,241,.035) 1px,transparent 1px)`;
+  S.grid.style.backgroundSize=`${g2}px ${g2}px,${g2}px ${g2}px,${g1}px ${g1}px,${g1}px ${g1}px`;
+  S.lines.setAttribute('viewBox',`0 0 ${W} ${H}`);
+}
+function render(t){
+  const u_=u, L=S.L;
+  // grid + bar
+  S.grid.style.opacity=.15+.85*eo(p(t,0,1.4));
+  const drift=t*6*u;S.grid.style.backgroundPosition=`${W/2+drift}px ${H/2}px`;
+  S.bar.style.transform=`scaleY(${eio(p(t,.3,1.4))})`;
+  // logo position: centred & larger early, then to final spot
+  const cx=W/2,cy=H/2, m=eio(p(t,7.2,8.4));
+  const sc=1.35+(1-1.35)*m;
+  const lx=(cx-S.fx)*(1-m), ly=(cy-S.fy)*(1-m);
+  const breathe=1+.012*eo(p(t,8.4,15));
+  S.logo.style.transform=`translate(${lx}px,${ly}px) scale(${sc*breathe})`;
+  const ocx=S.fx+lx, ocy=S.fy+ly, half=L*sc/2;
+  // construction lines (svg)
+  const d1=eo(p(t,.6,1.8)), lineOp=(1-.75*eio(p(t,6.8,8.0)));
+  const reg=eo(p(t,1.2,2.0));
+  const dim=eo(p(t,3.0,3.9));
+  const k=14*u, off=26*u;
+  const x0=ocx-half,x1=ocx+half,y0=ocy-half,y1=ocy+half;
+  const annotOp=1-eio(p(t,6.8,7.6));
+  let s=`<g stroke="#80BCC5" stroke-width="${1.2*u}" fill="none" opacity="${.55*lineOp}">`;
+  s+=`<line x1="${cx-W/2*d1}" y1="${ocy}" x2="${cx+W/2*d1}" y2="${ocy}"/>`;
+  s+=`<line x1="${ocx}" y1="${cy-H/2*d1}" x2="${ocx}" y2="${cy+H/2*d1}"/></g>`;
+  // registration corners
+  s+=`<g stroke="#80BCC5" stroke-width="${2*u}" fill="none" opacity="${reg*annotOp}">`;
+  const c=k*1.6*reg, q=off;
+  [[x0-q,y0-q,1,1],[x1+q,y0-q,-1,1],[x0-q,y1+q,1,-1],[x1+q,y1+q,-1,-1]].forEach(([x,y,a,b])=>{s+=`<path d="M${x} ${y+b*c} V${y} H${x+a*c}"/>`});
+  s+='</g>';
+  // dimension line under logo
+  if(dim>0){const yy=y1+q+34*u, xa=x0, xb=x0+(x1-x0)*dim;
+    s+=`<g stroke="#80BCC5" stroke-width="${1.5*u}" opacity="${annotOp*.9}"><line x1="${xa}" y1="${yy}" x2="${xb}" y2="${yy}"/><line x1="${xa}" y1="${yy-10*u}" x2="${xa}" y2="${yy+10*u}"/><line x1="${xb}" y1="${yy-10*u}" x2="${xb}" y2="${yy+10*u}"/></g>`;
+    s+=`<text x="${ocx}" y="${yy-14*u}" text-anchor="middle" fill="#80BCC5" opacity="${annotOp*p(t,3.6,4.0)}" font-family="Cond" font-weight="500" font-size="${22*u}" letter-spacing="${3*u}">ONE SOURCE OF TRUTH</text>`;}
+  // underline under tagline
+  S.lines.innerHTML=s;
+  // logo stroke draw
+  S.lr.style.strokeDasharray=t>=2.6?'none':S.lrlen+1;
+  S.lr.style.strokeDashoffset=(S.lrlen+1)*(1-eio(p(t,1.4,2.6)));
+  S.lr.style.fillOpacity=eo(p(t,2.3,3.0));
+  S.lp.style.strokeDashoffset=S.lplen*(1-eio(p(t,2.6,3.8)));
+  S.ls.style.strokeDashoffset=S.lslen*(1-eo(p(t,3.7,4.25)));
+  // labels: sheet + revision tick
+  S.sheet.style.left=(x0-q)+'px';S.sheet.style.top=(y0-q-46*u)+'px';
+  S.sheet.style.opacity=annotOp*eo(p(t,1.8,2.4));
+  const revs=[[4.5,'Rev A'],[5.0,'Rev B'],[5.5,'Rev C'],[6.0,'Current ✓']];
+  let rv='';for(const [a,l] of revs) if(t>=a) rv=l;
+  S.rev.textContent=rv;S.rev.style.right=(W-(x1+q))+'px';S.rev.style.top=(y0-q-46*u)+'px';
+  S.rev.style.opacity=rv?annotOp:0;
+  S.rev.style.color=rv.startsWith('Current')?'#80BCC5':'#8b9291';
+  const lastRev=revs.filter(r=>t>=r[0]).pop();
+  const pop=lastRev?1+.18*(1-eo(p(t,lastRev[0],lastRev[0]+.25))):1;
+  S.rev.style.transform=`scale(${pop})`;S.rev.style.transformOrigin='right center';
+  // wordmark
+  S.letters.forEach((e,i)=>{const a=p(t,8.0+i*.09,8.6+i*.09);const v=eo(a);e.style.transform=`translateY(${(1-v)*110}%)`;e.style.opacity=v>0?1:0;});
+  // tagline
+  const ts=[10.0,10.55,11.1];
+  S.tparts.forEach((e,i)=>{const v=eo(p(t,ts[i],ts[i]+.55));e.style.opacity=v;e.style.transform=`translateY(${(1-v)*24*u}px)`;});
+  S.slashes.forEach((e,i)=>{e.style.opacity=eo(p(t,ts[i+1]-.15,ts[i+1]+.3));});
+  S.handle.style.opacity=eo(p(t,12.4,13.2));
+  S.fade.style.opacity=eio(p(t,14.45,15));
+}
+</script></body></html>
