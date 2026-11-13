@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:600;src:url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:Cond;font-weight:500;src:url(../node_modules/@fontsource/barlow-condensed/files/barlow-condensed-latin-500-normal.woff2)}
+:root{--ink:#1D1F1F;--paper:#F3F3F1;--teal:#80BCC5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;overflow:hidden;background:transparent;font-family:Inter,sans-serif;color:var(--paper);-webkit-font-smoothing:antialiased;position:relative}
+.band{position:absolute;left:0;right:0;top:0;height:620px;background:linear-gradient(rgba(29,31,31,.92) 0%,rgba(29,31,31,.75) 60%,rgba(29,31,31,0) 100%)}
+.datum{position:absolute;top:0;bottom:0;left:64px;width:8px;background:var(--teal)}
+.brand{position:absolute;left:112px;top:150px;display:flex;align-items:center;gap:16px}.brand svg{width:52px;height:52px}.brand span{font-size:28px;font-weight:600}
+.mark{position:absolute;right:72px;top:166px;font-family:Cond;font-weight:500;letter-spacing:.16em;color:var(--teal);font-size:24px;text-transform:uppercase}
+h1{position:absolute;left:108px;top:240px;width:900px;font-weight:800;font-size:76px;letter-spacing:-.04em;line-height:1}
+.t{color:var(--teal)}
+#end{position:absolute;inset:0;background:var(--ink);display:none;flex-direction:column;align-items:center;justify-content:center;gap:40px;text-align:center}
+#end svg{width:180px;height:180px}#end h2{font-weight:800;font-size:92px;letter-spacing:-.045em;line-height:1;padding:0 80px}
+#end p{font-family:Cond;font-weight:500;letter-spacing:.18em;color:var(--teal);font-size:32px;text-transform:uppercase}
+</style></head><body>
+<div id="ov"><div class="band"></div><div class="datum"></div>
+<div class="brand"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#1b1e1d" stroke="#3a3f3e" stroke-width="2"/><path d="M30 78 V22 H58 C68 22 76 29 76 39 C76 49 68 56 58 56 H30" fill="none" stroke="#f3f4f1" stroke-width="7" stroke-linecap="square"/><path d="M30 22 V78" fill="none" stroke="#7cbcc4" stroke-width="7" stroke-linecap="square"/></svg><span>Plavyn</span></div>
+<div class="mark" id="mark"></div><h1 id="head"></h1></div>
+<div id="end"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#1b1e1d" stroke="#3a3f3e" stroke-width="2"/><path d="M30 78 V22 H58 C68 22 76 29 76 39 C76 49 68 56 58 56 H30" fill="none" stroke="#f3f4f1" stroke-width="7" stroke-linecap="square"/><path d="M30 22 V78" fill="none" stroke="#7cbcc4" stroke-width="7" stroke-linecap="square"/></svg><h2 id="endh"></h2><p>Follow @plavyn_1</p></div>
+<script>function setup(c,end){document.getElementById('mark').textContent=c.mark||'';document.getElementById('head').innerHTML=c.headline;document.getElementById('endh').innerHTML=c.end||c.headline;if(end){document.getElementById('ov').style.display='none';document.getElementById('end').style.display='flex';}}</script>
+</body></html>

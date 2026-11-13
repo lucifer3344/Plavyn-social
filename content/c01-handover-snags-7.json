@@ -1,0 +1,15 @@
+{
+  "id": "c01-handover-snags-7",
+  "kind": "device",
+  "mark": "SNAGS",
+  "headline": "Found one?\n*Log it on the spot.*",
+  "sub": "Each snag gets an owner and a due date, and closes only when it's checked.",
+  "media": {
+    "img": "assets/screens/04-snags.png",
+    "y0": 0,
+    "width": 720
+  },
+  "formats": [
+    "post"
+  ]
+}

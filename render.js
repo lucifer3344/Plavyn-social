@@ -2,6 +2,7 @@
 // Usage: node render.js content/<id>.json [more.json ...]
 // Writes out/<id>-post.jpg (1080x1350) and out/<id>-story.jpg (1080x1920)
 // unless the spec sets "formats" to a subset of ["post","story"].
+// kind "text" = headline + sub only (used for carousel slides).
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -73,7 +74,7 @@ function html(spec, fmt) {
   }
   const mark = story && spec.storyMark ? spec.storyMark : spec.mark;
   const foot = story ? `<div class="mark foot">${esc(spec.storyFoot || 'PLAVYN.COM')}</div>` : '';
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${css(H, story)}h1{font-size:${size}px}</style></head><body>
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${css(H, story)}h1{font-size:${size}px}${spec.kind === 'text' ? `h1{margin-top:${story ? 420 : 300}px}.sub{font-size:${story ? 42 : 40}px;max-width:860px}` : ''}</style></head><body>
 <div class="grid"></div><div class="vig"></div><div class="datum"></div>
 <div class="col"><div class="top"><div class="brand">${LOGO}<span>Plavyn</span></div><div class="mark">${esc(mark || '')}</div></div>
 <h1>${rich(spec.headline)}</h1>${spec.sub ? `<div class="sub">${rich(spec.sub)}</div>` : ''}

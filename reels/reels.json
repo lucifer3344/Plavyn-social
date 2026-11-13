@@ -1,25 +1,777 @@
 [
- {"id":"r1-snag-signoff","mark":"SNAG · SIGN-OFF","duration":13.5,"endAt":10.6,
-  "headline":"Nothing closes<br><span class=\"t\">until it's fixed.</span>",
-  "end":"Nothing closes<br><span class=\"t\">until it's fixed.</span>",
-  "screens":[{"img":"assets/screens/04-snags.png","at":0},{"img":"assets/screens/16-snag-signoff.png","at":4.3,"enter":"sheet"}],
-  "finger":[{"t":2.4,"x":980,"y":2050},{"t":3.8,"x":640,"y":1290,"tap":true},{"t":4.2,"x":640,"y":1290,"hide":true},
-            {"t":6.8,"x":1000,"y":2200},{"t":8.0,"x":420,"y":1634,"tap":true},{"t":8.6,"x":420,"y":1634,"hide":true}],
-  "highlights":[{"from":2.6,"to":4.0,"x":36,"y":1198,"w":1247,"h":223},{"from":5.0,"to":7.8,"x":60,"y":1397,"w":1200,"h":466}],
-  "captions":[{"from":2.4,"to":4.3,"text":"The terrace drain fix is done"},{"from":5.0,"to":7.9,"text":"It waits for whoever raised it"},{"from":8.2,"to":10.5,"text":"Checked on site. Closed."}]},
- {"id":"r2-check-to-snag","mark":"CHECKLIST · PRE-POUR","duration":14.3,"endAt":11.4,
-  "headline":"A failed check<br><span class=\"t\">becomes a snag.</span>",
-  "end":"A failed check<br><span class=\"t\">becomes a snag.</span>",
-  "screens":[{"img":"assets/screens/09-checklists.png","at":0},{"img":"assets/screens/18-checklist-detail.png","at":4.2,"enter":"push"},{"img":"assets/screens/04-snags.png","at":8.8,"enter":"push"}],
-  "finger":[{"t":2.4,"x":950,"y":1300},{"t":3.7,"x":600,"y":700,"tap":true},{"t":4.1,"x":600,"y":700,"hide":true},
-            {"t":5.2,"x":1050,"y":1800},{"t":6.3,"x":654,"y":1242,"tap":true},{"t":7.3,"x":360,"y":1404,"tap":true},{"t":7.8,"x":360,"y":1404,"hide":true}],
-  "highlights":[{"from":2.5,"to":3.9,"x":60,"y":618,"w":1212,"h":174},{"from":5.0,"to":8.6,"x":90,"y":1104,"w":1140,"h":360}],
-  "captions":[{"from":2.3,"to":4.2,"text":"Open the pre-pour checklist"},{"from":5.0,"to":7.1,"text":"Cover blocks missing? Fail."},{"from":7.2,"to":8.8,"text":"One tap: Raise Snag"},{"from":9.2,"to":11.3,"text":"Tracked with every other snag"}]},
- {"id":"r3-tasks-three-views","mark":"SITE · TASKS","duration":13.5,"endAt":10.6,
-  "headline":"One task list.<br><span class=\"t\">Three ways to see it.</span>",
-  "end":"One task list.<br><span class=\"t\">Three ways to see it.</span>",
-  "screens":[{"img":"assets/screens/06-tasks-list.png","at":0},{"img":"assets/screens/07-tasks-board.png","at":4.4,"enter":"fade"},{"img":"assets/screens/08-tasks-schedule.png","at":7.6,"enter":"fade"}],
-  "finger":[{"t":2.6,"x":800,"y":1300},{"t":4.0,"x":228,"y":516,"tap":true},{"t":5.8,"x":228,"y":516},{"t":7.2,"x":360,"y":516,"tap":true},{"t":7.9,"x":360,"y":516,"hide":true}],
-  "highlights":[{"from":2.7,"to":4.3,"x":40,"y":466,"w":380,"h":100}],
-  "captions":[{"from":2.3,"to":4.4,"text":"Your site's tasks as a list"},{"from":4.7,"to":7.5,"text":"As a board, by status"},{"from":7.9,"to":10.4,"text":"Or by due date"}]}
+ {
+  "id": "r1-snag-signoff",
+  "mark": "SNAG · SIGN-OFF",
+  "duration": 13.5,
+  "endAt": 10.6,
+  "headline": "Nothing closes<br><span class=\"t\">until it's fixed.</span>",
+  "end": "Nothing closes<br><span class=\"t\">until it's fixed.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/04-snags.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/16-snag-signoff.png",
+    "at": 4.3,
+    "enter": "sheet"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.4,
+    "x": 980,
+    "y": 2050
+   },
+   {
+    "t": 3.8,
+    "x": 640,
+    "y": 1290,
+    "tap": true
+   },
+   {
+    "t": 4.2,
+    "x": 640,
+    "y": 1290,
+    "hide": true
+   },
+   {
+    "t": 6.8,
+    "x": 1000,
+    "y": 2200
+   },
+   {
+    "t": 8.0,
+    "x": 420,
+    "y": 1634,
+    "tap": true
+   },
+   {
+    "t": 8.6,
+    "x": 420,
+    "y": 1634,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 2.6,
+    "to": 4.0,
+    "x": 36,
+    "y": 1198,
+    "w": 1247,
+    "h": 223
+   },
+   {
+    "from": 5.0,
+    "to": 7.8,
+    "x": 60,
+    "y": 1397,
+    "w": 1200,
+    "h": 466
+   }
+  ],
+  "captions": [
+   {
+    "from": 2.4,
+    "to": 4.3,
+    "text": "The terrace drain fix is done"
+   },
+   {
+    "from": 5.0,
+    "to": 7.9,
+    "text": "It waits for whoever raised it"
+   },
+   {
+    "from": 8.2,
+    "to": 10.5,
+    "text": "Checked on site. Closed."
+   }
+  ]
+ },
+ {
+  "id": "r2-check-to-snag",
+  "mark": "CHECKLIST · PRE-POUR",
+  "duration": 14.3,
+  "endAt": 11.4,
+  "headline": "A failed check<br><span class=\"t\">becomes a snag.</span>",
+  "end": "A failed check<br><span class=\"t\">becomes a snag.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/09-checklists.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/18-checklist-detail.png",
+    "at": 4.2,
+    "enter": "push"
+   },
+   {
+    "img": "assets/screens/04-snags.png",
+    "at": 8.8,
+    "enter": "push"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.4,
+    "x": 950,
+    "y": 1300
+   },
+   {
+    "t": 3.7,
+    "x": 600,
+    "y": 700,
+    "tap": true
+   },
+   {
+    "t": 4.1,
+    "x": 600,
+    "y": 700,
+    "hide": true
+   },
+   {
+    "t": 5.2,
+    "x": 1050,
+    "y": 1800
+   },
+   {
+    "t": 6.3,
+    "x": 654,
+    "y": 1242,
+    "tap": true
+   },
+   {
+    "t": 7.3,
+    "x": 360,
+    "y": 1404,
+    "tap": true
+   },
+   {
+    "t": 7.8,
+    "x": 360,
+    "y": 1404,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 2.5,
+    "to": 3.9,
+    "x": 60,
+    "y": 618,
+    "w": 1212,
+    "h": 174
+   },
+   {
+    "from": 5.0,
+    "to": 8.6,
+    "x": 90,
+    "y": 1104,
+    "w": 1140,
+    "h": 360
+   }
+  ],
+  "captions": [
+   {
+    "from": 2.3,
+    "to": 4.2,
+    "text": "Open the pre-pour checklist"
+   },
+   {
+    "from": 5.0,
+    "to": 7.1,
+    "text": "Cover blocks missing? Fail."
+   },
+   {
+    "from": 7.2,
+    "to": 8.8,
+    "text": "One tap: Raise Snag"
+   },
+   {
+    "from": 9.2,
+    "to": 11.3,
+    "text": "Tracked with every other snag"
+   }
+  ]
+ },
+ {
+  "id": "r3-tasks-three-views",
+  "mark": "SITE · TASKS",
+  "duration": 13.5,
+  "endAt": 10.6,
+  "headline": "One task list.<br><span class=\"t\">Three ways to see it.</span>",
+  "end": "One task list.<br><span class=\"t\">Three ways to see it.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/06-tasks-list.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/07-tasks-board.png",
+    "at": 4.4,
+    "enter": "fade"
+   },
+   {
+    "img": "assets/screens/08-tasks-schedule.png",
+    "at": 7.6,
+    "enter": "fade"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.6,
+    "x": 800,
+    "y": 1300
+   },
+   {
+    "t": 4.0,
+    "x": 228,
+    "y": 516,
+    "tap": true
+   },
+   {
+    "t": 5.8,
+    "x": 228,
+    "y": 516
+   },
+   {
+    "t": 7.2,
+    "x": 360,
+    "y": 516,
+    "tap": true
+   },
+   {
+    "t": 7.9,
+    "x": 360,
+    "y": 516,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 2.7,
+    "to": 4.3,
+    "x": 40,
+    "y": 466,
+    "w": 380,
+    "h": 100
+   }
+  ],
+  "captions": [
+   {
+    "from": 2.3,
+    "to": 4.4,
+    "text": "Your site's tasks as a list"
+   },
+   {
+    "from": 4.7,
+    "to": 7.5,
+    "text": "As a board, by status"
+   },
+   {
+    "from": 7.9,
+    "to": 10.4,
+    "text": "Or by due date"
+   }
+  ]
+ },
+ {
+  "id": "r4-rfi-on-record",
+  "mark": "SITE · RFIS",
+  "duration": 14.0,
+  "endAt": 11.0,
+  "headline": "Stop asking RFIs<br><span class=\"t\">on phone calls.</span>",
+  "end": "Ask once.<br><span class=\"t\">Answer on record.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/01-projects.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/05-rfis.png",
+    "at": 3.6,
+    "enter": "push"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.0,
+    "x": 900,
+    "y": 1300
+   },
+   {
+    "t": 3.1,
+    "x": 600,
+    "y": 470,
+    "tap": true
+   },
+   {
+    "t": 3.5,
+    "x": 600,
+    "y": 470,
+    "hide": true
+   },
+   {
+    "t": 6.4,
+    "x": 1000,
+    "y": 1500
+   },
+   {
+    "t": 7.8,
+    "x": 400,
+    "y": 1020,
+    "tap": true
+   },
+   {
+    "t": 8.3,
+    "x": 400,
+    "y": 1020,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 2.3,
+    "to": 3.5,
+    "x": 34,
+    "y": 396,
+    "w": 1250,
+    "h": 172
+   },
+   {
+    "from": 4.5,
+    "to": 7.6,
+    "x": 34,
+    "y": 673,
+    "w": 1250,
+    "h": 228
+   },
+   {
+    "from": 8.1,
+    "to": 10.7,
+    "x": 34,
+    "y": 937,
+    "w": 1250,
+    "h": 174
+   }
+  ],
+  "captions": [
+   {
+    "from": 1.8,
+    "to": 3.6,
+    "text": "Open the project"
+   },
+   {
+    "from": 4.5,
+    "to": 7.6,
+    "text": "Asked in writing, with a due date"
+   },
+   {
+    "from": 8.1,
+    "to": 10.7,
+    "text": "Answered. On record."
+   }
+  ]
+ },
+ {
+  "id": "r5-pin-a-snag",
+  "mark": "DRAWINGS · SNAGS",
+  "duration": 14.3,
+  "endAt": 11.4,
+  "headline": "Mark the exact spot.<br><span class=\"t\">On the drawing.</span>",
+  "end": "Every snag,<br><span class=\"t\">exactly where it is.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/03-drawings.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/pin-chooser.png",
+    "at": 3.7,
+    "enter": "push"
+   },
+   {
+    "img": "assets/screens/15-snag-detail.png",
+    "at": 6.8,
+    "enter": "sheet"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.1,
+    "x": 900,
+    "y": 1300
+   },
+   {
+    "t": 3.2,
+    "x": 500,
+    "y": 475,
+    "tap": true
+   },
+   {
+    "t": 3.6,
+    "x": 500,
+    "y": 475,
+    "hide": true
+   },
+   {
+    "t": 4.4,
+    "x": 900,
+    "y": 1400
+   },
+   {
+    "t": 5.4,
+    "x": 660,
+    "y": 470,
+    "tap": true
+   },
+   {
+    "t": 6.4,
+    "x": 660,
+    "y": 470,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 4.4,
+    "to": 6.6,
+    "x": 297,
+    "y": 216,
+    "w": 719,
+    "h": 536
+   },
+   {
+    "from": 7.5,
+    "to": 9.2,
+    "x": 50,
+    "y": 528,
+    "w": 1220,
+    "h": 317
+   },
+   {
+    "from": 9.3,
+    "to": 11.1,
+    "x": 50,
+    "y": 1637,
+    "w": 1220,
+    "h": 555
+   }
+  ],
+  "captions": [
+   {
+    "from": 1.8,
+    "to": 3.7,
+    "text": "Open the drawing"
+   },
+   {
+    "from": 4.4,
+    "to": 6.6,
+    "text": "Tap the spot. Log a snag."
+   },
+   {
+    "from": 7.5,
+    "to": 9.2,
+    "text": "What's wrong, and where"
+   },
+   {
+    "from": 9.3,
+    "to": 11.2,
+    "text": "Who fixes it, and by when"
+   }
+  ],
+  "capTop": 1730
+ },
+ {
+  "id": "r6-cover-blocks",
+  "mark": "SITE TIP · RCC",
+  "duration": 18.5,
+  "endAt": 15.6,
+  "headline": "Cover blocks:<br><span class=\"t\">5 checks before the pour.</span>",
+  "end": "Check it.<br><span class=\"t\">Then call for concrete.</span>",
+  "cards": [
+   {
+    "at": 1.4,
+    "title": "Cover matches the drawing",
+    "body": "Slab, beam and column covers are often different. Read the note, not your memory."
+   },
+   {
+    "at": 4.2,
+    "title": "Proper blocks only",
+    "body": "Concrete or PVC cover blocks. No brick bats, no stone pieces."
+   },
+   {
+    "at": 7.0,
+    "title": "Tied, not just placed",
+    "body": "Loose blocks shift when the crew walks the steel."
+   },
+   {
+    "at": 9.8,
+    "title": "Check edges and laps",
+    "body": "That's where cover goes missing first."
+   },
+   {
+    "at": 12.6,
+    "title": "Walk it with a tape",
+    "body": "Measure a few spots before you sign the pour card."
+   }
+  ]
+ },
+ {
+  "id": "r7-measure",
+  "mark": "DRAWINGS · MEASURE",
+  "duration": 14.0,
+  "endAt": 11.0,
+  "headline": "No scale rule?<br><span class=\"t\">Measure on the sheet.</span>",
+  "end": "Measure anything.<br><span class=\"t\">Metric or feet-inches.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/03-drawings.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/measure.png",
+    "at": 3.7,
+    "enter": "push"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.1,
+    "x": 900,
+    "y": 1300
+   },
+   {
+    "t": 3.2,
+    "x": 1162,
+    "y": 475,
+    "tap": true
+   },
+   {
+    "t": 3.6,
+    "x": 1162,
+    "y": 475,
+    "hide": true
+   },
+   {
+    "t": 4.3,
+    "x": 300,
+    "y": 1500
+   },
+   {
+    "t": 5.0,
+    "x": 77,
+    "y": 1045,
+    "tap": true
+   },
+   {
+    "t": 6.4,
+    "x": 998,
+    "y": 1045,
+    "tap": true
+   },
+   {
+    "t": 6.9,
+    "x": 998,
+    "y": 1045,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 7.0,
+    "to": 8.8,
+    "x": 370,
+    "y": 955,
+    "w": 350,
+    "h": 100
+   },
+   {
+    "from": 8.9,
+    "to": 10.8,
+    "x": 410,
+    "y": 2510,
+    "w": 490,
+    "h": 110
+   }
+  ],
+  "captions": [
+   {
+    "from": 1.8,
+    "to": 3.7,
+    "text": "Tap measure on any drawing"
+   },
+   {
+    "from": 4.4,
+    "to": 6.9,
+    "text": "Tap two points"
+   },
+   {
+    "from": 7.0,
+    "to": 8.8,
+    "text": "Set the scale from one known length"
+   },
+   {
+    "from": 8.9,
+    "to": 10.8,
+    "text": "Metres and feet-inches together"
+   }
+  ]
+ },
+ {
+  "id": "r8-whatsapp-site",
+  "mark": "SITE LIFE",
+  "duration": 16.0,
+  "endAt": 13.0,
+  "headline": "Your site runs<br><span class=\"t\">on WhatsApp if…</span>",
+  "end": "One place for<br><span class=\"t\">drawings, snags, RFIs.</span>",
+  "cards": [
+   {
+    "at": 1.4,
+    "title": "The latest drawing is “somewhere in the group”"
+   },
+   {
+    "at": 4.3,
+    "title": "Snag photos sink under 200 messages"
+   },
+   {
+    "at": 7.2,
+    "title": "Nobody can say if the RFI was answered"
+   },
+   {
+    "at": 10.1,
+    "title": "The site diary is a voice note"
+   }
+  ]
+ },
+ {
+  "id": "r9-submittals",
+  "mark": "SITE · SUBMITTALS",
+  "duration": 14.0,
+  "endAt": 11.2,
+  "headline": "Shop drawings stuck<br><span class=\"t\">in someone's inbox?</span>",
+  "end": "Every submittal,<br><span class=\"t\">to a decision.</span>",
+  "screens": [
+   {
+    "img": "assets/screens/05-rfis.png",
+    "at": 0
+   },
+   {
+    "img": "assets/screens/10-submittals.png",
+    "at": 3.6,
+    "enter": "fade"
+   }
+  ],
+  "finger": [
+   {
+    "t": 2.0,
+    "x": 800,
+    "y": 1300
+   },
+   {
+    "t": 3.1,
+    "x": 1061,
+    "y": 412,
+    "tap": true
+   },
+   {
+    "t": 3.6,
+    "x": 1061,
+    "y": 412,
+    "hide": true
+   }
+  ],
+  "highlights": [
+   {
+    "from": 2.3,
+    "to": 3.5,
+    "x": 930,
+    "y": 360,
+    "w": 265,
+    "h": 105
+   },
+   {
+    "from": 4.4,
+    "to": 6.8,
+    "x": 34,
+    "y": 665,
+    "w": 1250,
+    "h": 280
+   },
+   {
+    "from": 6.9,
+    "to": 8.8,
+    "x": 34,
+    "y": 990,
+    "w": 1250,
+    "h": 224
+   },
+   {
+    "from": 8.9,
+    "to": 10.9,
+    "x": 34,
+    "y": 1259,
+    "w": 1250,
+    "h": 280
+   }
+  ],
+  "captions": [
+   {
+    "from": 1.8,
+    "to": 3.6,
+    "text": "Open Submittals"
+   },
+   {
+    "from": 4.4,
+    "to": 6.8,
+    "text": "Revise & resubmit, with a due date"
+   },
+   {
+    "from": 6.9,
+    "to": 8.8,
+    "text": "Approved as noted"
+   },
+   {
+    "from": 8.9,
+    "to": 10.9,
+    "text": "In review with the consultant"
+   }
+  ]
+ },
+ {
+  "id": "r10-curing",
+  "mark": "SITE TIP · CONCRETE",
+  "duration": 18.5,
+  "endAt": 15.6,
+  "headline": "Curing concrete:<br><span class=\"t\">how many days?</span>",
+  "end": "Cure it right.<br><span class=\"t\">Record it daily.</span>",
+  "cards": [
+   {
+    "at": 1.4,
+    "title": "7 days minimum with OPC",
+    "body": "Keep exposed surfaces continuously moist (IS 456)."
+   },
+   {
+    "at": 4.2,
+    "title": "10 days with PPC or blended cement",
+    "body": "Mineral admixtures gain strength slower. Cure longer."
+   },
+   {
+    "at": 7.0,
+    "title": "Hot, dry weather? Go longer.",
+    "body": "IS 456 asks for at least 10 days with OPC in hot or dry weather."
+   },
+   {
+    "at": 9.8,
+    "title": "Keep it wet, not damp",
+    "body": "Ponding, wet hessian or a curing compound, as your spec says."
+   },
+   {
+    "at": 12.6,
+    "title": "Write it down",
+    "body": "Start date and method in the site diary, so nobody argues later."
+   }
+  ]
+ }
 ]

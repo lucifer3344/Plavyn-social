@@ -22,13 +22,16 @@ def whoosh(n=int(.45*SR)):
     t = np.arange(n)/SR
     noise = np.convolve(np.random.randn(n), np.ones(40)/40, 'same')
     return .35*noise*np.sin(np.pi*t/t[-1])**2
+import sys
+ONLY = sys.argv[1:]
 for r in json.load(open('reels.json')):
+    if ONLY and r['id'] not in ONLY: continue
     d = r['duration']; a = pad(d)
     def add(sig, at):
         i = int(at*SR); j = min(len(a), i+len(sig)); a[i:j] += sig[:j-i]
-    for k in r['finger']:
+    for k in r.get('finger', []):
         if k.get('tap'): add(click(), k['t'])
-    for s in r['screens'][1:]: add(whoosh(), s['at'])
+    for s in r.get('screens', [])[1:] + r.get('cards', []): add(whoosh(), s['at'])
     add(whoosh()*1.2, r['endAt'])
     a = np.clip(a, -1, 1)
     w = wave.open(f"out/{r['id']}.wav", 'wb'); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
