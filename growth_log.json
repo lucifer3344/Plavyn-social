@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-11-16",
+    "week": "2026-11-10..2026-11-16",
+    "followers": 1,
+    "follows": 4,
+    "media_count": 26,
+    "posts_this_week": {
+      "images": 7,
+      "reels": 2,
+      "carousels": 0
+    },
+    "total_reach": 41,
+    "reel_reach": 41,
+    "image_reach": 0,
+    "carousel_reach": 0,
+    "reach_non_followers": 41,
+    "saves": 0,
+    "shares": 0,
+    "comments": 0,
+    "likes": 0,
+    "best": {
+      "id": "r6-cover-blocks",
+      "media_id": "17887004871652463",
+      "reach": 23,
+      "skip_rate": 0.818,
+      "avg_watch_ms": 2182
+    },
+    "worst_reel": {
+      "id": "r5-pin-a-snag",
+      "media_id": "18119879060278626",
+      "reach": 18,
+      "skip_rate": 1.0,
+      "avg_watch_ms": 1563
+    },
+    "prev_week": {
+      "range": "2026-11-03..2026-11-09",
+      "followers": null,
+      "total_reach": 41,
+      "reel_reach": 41,
+      "image_reach": 0,
+      "images": 6,
+      "reels": 4
+    },
+    "notes": "First weekly log; no earlier follower count recorded. r4-rfi-on-record (dated 11-13) never posted. Moved today's reel to the cards format."
+  }
+]

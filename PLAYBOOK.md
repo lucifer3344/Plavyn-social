@@ -4,6 +4,19 @@ Account: @plavyn_1 (Windsor.ai connector `instagram`, account id `17841480417097
 Every day: 9 AM IST one feed post (Saturdays: a carousel) and one story; 7 PM IST one reel.
 Goal: grow followers. Reels reach non-followers; image posts mostly reach existing followers (in Nov 2026 images reached ~0, reels 1–31).
 
+## Learnings (from weekly reports — follow these; the Monday report updates them)
+Week to 2026-11-16: 1 follower. 13 image posts across two weeks reached 0 accounts; every account reached came from reels (all non-followers).
+- **Reels are the growth channel.** Never skip or delay the 7 PM reel. If a queued reel can't post, re-date it to the next free
+  day instead of leaving it stuck in the past (r4 sat unposted for 3 days).
+- **Cards beat app demos.** Best reel: r6-cover-blocks (cards tip, reach 23, skip 82%). Worst: r5-pin-a-snag (demo, reach 18,
+  skip 100%, avg watch 1.6 s). When making 7 new reels use 4 cards (tips / site pain) + 3 demo instead of 3 demo + 3 cards + 1.
+- **The first 3 s are losing almost everyone** (skip 82–100%, avg watch 1.5–2.5 s on 12–20 s reels). For new reels:
+  frame 0 must already show the headline (no fade-in, no logo first); demo reels open on the problem as a card for ~1 s
+  before the phone appears; aim for 10–14 s; put a number in the hook ("5 checks", "7 days") when the topic allows.
+- **Saves, shares, comments and follows are all 0 so far** — keep one clear ask per reel ("Save this", "Tag your site engineer");
+  don't stack two asks.
+- Order upcoming reels so a cards reel runs before a demo reel when both are queued close together.
+
 ## Daily run
 
 1. Work from a clone of this repo (`lucifer3344/plavyn-social`), branch `main`.
@@ -63,7 +76,7 @@ Make 7 new days in the same style, then add them to `queue.json`:
     `capTop` moves the caption pill if it covers a highlight). Preview with `node reels/record.js preview 2,5,9 <id>` and look.
   - **cards**: `cards: [{at, title, body}]` — numbered tips/pain points, no phone. Good for site-craft tips and "your site
     runs on WhatsApp if…" style hooks. Bottom line defaults to "Save this · Follow @plavyn_1" (`cta` to change).
-- Mix per 7 reels: 3 demo, 2 site tips (cards), 1 site-pain (cards), 1 free choice. Don't reuse a reel id or repeat a
+- Mix per 7 reels: 3 demo, 3 site tips (cards), 1 site-pain (cards) (changed 2026-11-16, see Learnings). Don't reuse a reel id or repeat a
   reel topic within 14 days. Headline = hook in the first second (a question or a problem, ≤ 7 words). 12–20 s long.
 - Reel captions: hook line, 2–3 short sentences, one call to action that asks for a follow, save, comment or tag,
   4–6 specific hashtags ending with `#plavyn #constructionindia #siteengineer`.

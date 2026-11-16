@@ -18,14 +18,6 @@
     "media_id": "posted-2026-11-06"
   },
   {
-    "date": "2026-11-13",
-    "id": "r4-rfi-on-record",
-    "video": "reels/out/r4-rfi-on-record.mp4",
-    "cover": "reels/out/r4-rfi-on-record-cover.jpg",
-    "caption": "Stop asking RFIs on phone calls.\n\nA question asked on a call is forgotten by Friday. In Plavyn every RFI is written down, sent to the right consultant with a due date, and the answer stays on record for the next person on site.\n\nFollow @plavyn_1 for a site tip every day.\n\n#rfi #structuralengineering #constructionmanagement #projectmanagement #plavyn #constructionindia #siteengineer",
-    "media_id": null
-  },
-  {
     "date": "2026-11-14",
     "id": "r5-pin-a-snag",
     "video": "reels/out/r5-pin-a-snag.mp4",
@@ -43,18 +35,18 @@
   },
   {
     "date": "2026-11-16",
-    "id": "r7-measure",
-    "video": "reels/out/r7-measure.mp4",
-    "cover": "reels/out/r7-measure-cover.jpg",
-    "caption": "No scale rule? Measure on the sheet.\n\nSet the scale from one known length, tap two points, and read it in metres and feet-inches together. Right on site, no printout.\n\nMetres or feet-inches on your site? Comment below.\n\n#constructiondrawings #architecture #civilengineering #measure #plavyn #constructionindia #siteengineer",
-    "media_id": null
-  },
-  {
-    "date": "2026-11-17",
     "id": "r8-whatsapp-site",
     "video": "reels/out/r8-whatsapp-site.mp4",
     "cover": "reels/out/r8-whatsapp-site-cover.jpg",
     "caption": "Your site runs on WhatsApp if…\n\nThe latest drawing is \"somewhere in the group\". Snag photos sink under good-morning messages. Nobody can say if the RFI was answered.\n\nTag the site engineer who needs to see this.\n\n#sitelife #constructionlife #civilengineering #projectmanagement #plavyn #constructionindia #siteengineer",
+    "media_id": null
+  },
+  {
+    "date": "2026-11-17",
+    "id": "r7-measure",
+    "video": "reels/out/r7-measure.mp4",
+    "cover": "reels/out/r7-measure-cover.jpg",
+    "caption": "No scale rule? Measure on the sheet.\n\nSet the scale from one known length, tap two points, and read it in metres and feet-inches together. Right on site, no printout.\n\nMetres or feet-inches on your site? Comment below.\n\n#constructiondrawings #architecture #civilengineering #measure #plavyn #constructionindia #siteengineer",
     "media_id": null
   },
   {
@@ -67,6 +59,14 @@
   },
   {
     "date": "2026-11-19",
+    "id": "r4-rfi-on-record",
+    "video": "reels/out/r4-rfi-on-record.mp4",
+    "cover": "reels/out/r4-rfi-on-record-cover.jpg",
+    "caption": "Stop asking RFIs on phone calls.\n\nA question asked on a call is forgotten by Friday. In Plavyn every RFI is written down, sent to the right consultant with a due date, and the answer stays on record for the next person on site.\n\nFollow @plavyn_1 for a site tip every day.\n\n#rfi #structuralengineering #constructionmanagement #projectmanagement #plavyn #constructionindia #siteengineer",
+    "media_id": null
+  },
+  {
+    "date": "2026-11-20",
     "id": "r9-submittals",
     "video": "reels/out/r9-submittals.mp4",
     "cover": "reels/out/r9-submittals-cover.jpg",
