@@ -1,0 +1,19 @@
+{
+  "id": "d19-ipad-board",
+  "kind": "device",
+  "mark": "TASKS · IPAD",
+  "headline": "Drag the plan.\n*On the iPad.*",
+  "headlineSize": 96,
+  "sub": "Open, In Progress, Done. Every card has an owner, a priority and a due date.",
+  "media": {
+    "img": "assets/screens/ipad-tasks-board.png",
+    "x0": 0,
+    "x1": 1780,
+    "y0": 0,
+    "y1": 900,
+    "width": 900,
+    "radius": 36
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

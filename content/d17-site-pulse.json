@@ -1,0 +1,30 @@
+{
+  "id": "d17-site-pulse",
+  "kind": "widgets",
+  "mark": "WIDGETS · SITE PULSE",
+  "headline": "The whole project,\n*in one glance.*",
+  "headlineSize": 96,
+  "sub": "Open snags, RFIs, tasks and submittals, plus what's overdue, on your Home Screen and Lock Screen.",
+  "media": [
+    {
+      "img": "assets/widgets/04-site-pulse-medium.png",
+      "x0": 72,
+      "x1": 1086,
+      "y0": 72,
+      "y1": 546,
+      "width": 840,
+      "radius": 54
+    },
+    {
+      "img": "assets/widgets/13-lock-site-pulse-rectangular.png",
+      "x0": 72,
+      "x1": 588,
+      "y0": 72,
+      "y1": 300,
+      "width": 560,
+      "radius": 60
+    }
+  ],
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

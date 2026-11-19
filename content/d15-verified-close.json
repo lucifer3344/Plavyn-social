@@ -1,0 +1,16 @@
+{
+  "id": "d15-verified-close",
+  "kind": "device",
+  "mark": "SNAGS · SIGN-OFF",
+  "headline": "Fixed isn't closed.\n*Checked is.*",
+  "headlineSize": 96,
+  "sub": "The fix is marked resolved, then the person who raised it verifies and closes it. Not fixed? It reopens.",
+  "media": {
+    "img": "assets/screens/16-snag-signoff.png",
+    "y0": 930,
+    "y1": 1880,
+    "width": 760
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

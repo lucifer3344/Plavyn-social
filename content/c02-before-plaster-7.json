@@ -1,0 +1,16 @@
+{
+  "id": "c02-before-plaster-7",
+  "kind": "device",
+  "mark": "CHECKLISTS",
+  "headline": "Make it a checklist.\n*Pass, Fail, N/A.*",
+  "sub": "A failed check becomes a snag in one tap, with an owner and a due date.",
+  "media": {
+    "img": "assets/screens/09-checklists.png",
+    "y0": 0,
+    "width": 720
+  },
+  "formats": [
+    "post"
+  ],
+  "headlineSize": 92
+}

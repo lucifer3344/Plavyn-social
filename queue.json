@@ -143,5 +143,78 @@
     "caption": "Before handover: 5 snags owners find first.\n\nDoors that rub, a bathroom floor that pools water, damp patches, hollow tiles, a dead socket. Walk these before the owner does, and log each one with an owner and a due date.\n\nSave this for your next handover walk.\n\n#handover #snagging #qualitycontrol #realestateindia #interiorfinishing #plavyn #constructionindia #siteengineer",
     "post_media_id": null,
     "story_media_id": null
+  },
+  {
+    "date": "2026-11-22",
+    "id": "d15-verified-close",
+    "post": "out/d15-verified-close-post.jpg",
+    "story": "out/d15-verified-close-story.jpg",
+    "caption": "Fixed isn't closed. Checked is.\n\nA snag marked resolved isn't done yet. In Plavyn, the person who raised it walks back, checks the fix, and taps Verify & Close. Not fixed? One tap and it reopens with the same owner.\n\nWho signs off snags on your site?\n\n#snagging #qualitycontrol #punchlist #sitesupervisor #construction #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-23",
+    "id": "d16-whatsapp-site",
+    "post": "out/d16-whatsapp-site-post.jpg",
+    "story": "out/d16-whatsapp-site-story.jpg",
+    "caption": "Your site runs on WhatsApp if…\n\nThe latest drawing is whatever was forwarded last. Snags are photos in a group, gone by evening. Decisions are voice notes nobody can find at handover.\n\nHow many of these is your site? Tell us in the comments.\n\n#whatsapp #constructionmanagement #sitelife #projectmanager #civilengineering #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-24",
+    "id": "d17-site-pulse",
+    "post": "out/d17-site-pulse-post.jpg",
+    "story": "out/d17-site-pulse-story.jpg",
+    "caption": "The whole project, in one glance.\n\nPlavyn's Site Pulse widget shows open snags, RFIs, tasks and submittals, and what's overdue. Put it on your Home Screen, or the compact version on your Lock Screen.\n\nFollow for more of what's in the app.\n\n#ioswidgets #iphone #projectmanager #constructionmanagement #productivity #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-25",
+    "id": "d18-curing",
+    "post": "out/d18-curing-post.jpg",
+    "story": "out/d18-curing-story.jpg",
+    "caption": "Curing concrete: keep it wet.\n\nIS 456 (clause 13.5.1) asks for at least 7 days of moist curing for OPC and 10 days with fly ash or slag cements, and not less than 10 days in hot, dry weather. Ponding or wet hessian, kept wet the whole time.\n\nSave this for your next pour.\n\n#concrete #curing #is456 #rcc #civilengineering #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-26",
+    "id": "d19-ipad-board",
+    "post": "out/d19-ipad-board-post.jpg",
+    "story": "out/d19-ipad-board-story.jpg",
+    "caption": "Drag the plan. On the iPad.\n\nIn the site office, the task board shows Open, In Progress and Done side by side. Every card has an owner, a priority and a due date, and it's the same list the team sees on their iPhones on site.\n\nBoard or list: how does your team plan the week?\n\n#ipad #taskmanagement #projectmanager #constructionmanagement #kanban #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-27",
+    "id": "d20-built-for-india",
+    "post": "out/d20-built-for-india-post.jpg",
+    "story": "out/d20-built-for-india-story.jpg",
+    "caption": "Built for Indian sites.\n\nWe're building Plavyn for the way Indian projects run: feet-inches and metric, an iPhone on site and an iPad in the site office, files in your own OneDrive or Google Drive, and contractors who see only the wings they work on.\n\nWhat's missing on your site? Tell us in the comments, we read every one.\n\n#buildinpublic #startupindia #constructiontech #architecture #realestateindia #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
+  },
+  {
+    "date": "2026-11-28",
+    "id": "c02-before-plaster",
+    "type": "carousel",
+    "slides": [
+      "out/c02-before-plaster-1-post.jpg",
+      "out/c02-before-plaster-2-post.jpg",
+      "out/c02-before-plaster-3-post.jpg",
+      "out/c02-before-plaster-4-post.jpg",
+      "out/c02-before-plaster-5-post.jpg",
+      "out/c02-before-plaster-6-post.jpg",
+      "out/c02-before-plaster-7-post.jpg"
+    ],
+    "post": "out/c02-before-plaster-1-post.jpg",
+    "story": "out/c02-before-plaster-1-story.jpg",
+    "caption": "Before you plaster: 5 checks.\n\nOnce it's plastered, it's hidden. Fix conduits and boxes, fill the chases, mesh the RCC–masonry joints, prepare the surface, and set dots and screeds before the first coat.\n\nSave this for your next floor.\n\n#plastering #masonry #qualitycontrol #civilengineering #interiorfinishing #plavyn #constructionindia #siteengineer",
+    "post_media_id": null,
+    "story_media_id": null
   }
 ]
