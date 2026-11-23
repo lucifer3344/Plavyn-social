@@ -29,6 +29,48 @@ Week to 2026-11-16: 1 follower. 13 image posts across two weeks reached 0 accoun
   don't stack two asks.
 - Order upcoming reels so a cards reel runs before a demo reel when both are queued close together.
 
+## Audience & competition (added 2026-11-23 — follow for all new content)
+**Who we're for:** site engineers, project managers and **architects / consultants** on Indian building projects
+(residential towers, commercial, interiors), plus developers' project teams. Not DIY homeowners, not heavy-machinery fans,
+not generic "construction motivation" audiences — reach from those doesn't turn into app users.
+
+**Competition (checked 2026-11-23):**
+- *Powerplay* (India's largest site app, contractor/labour/material focus) runs its Instagram as a community page,
+  `@civilengineersdiary` ("Powerplay – Construction app"), posting civil-engineer content rather than product ads. That is the
+  bar: engineers follow pages that teach them or speak their site life, not product pages.
+- Global apps (Procore, Fieldwire, PlanRadar, Autodesk Construction Cloud) post polished product + jobsite content for US/EU
+  audiences; little is India-specific or architect-facing.
+- Indian "construction" creators are mostly home-builders, machinery or lifestyle pages — few speak to architects + site teams.
+
+**How we beat them (our lane):**
+1. **Drawings and design coordination** is our ground — current drawing vs superseded, RFIs to the consultant, submittals,
+   snags pinned on the sheet, measure on the sheet. Powerplay owns labour/material/attendance; don't fight there.
+2. **Architect-facing content every week** — at least 2 of 7 reels and 2 of 7 feed posts aimed at architects/consultants
+   (e.g. "Site built off an old revision?", "5 things architects check on a site visit", "Answering RFIs without 20 calls",
+   "Design intent vs what got built"). Use `#architects` on these.
+3. **Teach, then show.** Lead with a site-craft tip or a pain point the viewer recognises in 1 s; the app appears only as the
+   last beat. Tips must follow the "Keep it real" rules (code-cited or standard practice).
+4. **Better craft than the competition:** headline on frame 0, 10–14 s, one idea per reel, clean brand look, real site clips
+   from Kaushal whenever available (they beat any template), reply to every comment within the day.
+5. **Built to be sent:** each reel should be something an engineer forwards to their team or their architect — checklists,
+   "your site runs on WhatsApp if…", before-pour / before-plaster checks.
+
+**Search keywords (Instagram search reads captions, on-screen text, name and bio):** put one in the first caption line and
+the on-screen headline: site engineer, civil engineering, architect, construction drawings, RFI, snag list / punch list,
+shop drawings, submittals, concrete / curing / slab / plaster / waterproofing, construction management, site diary.
+
+**Hashtag sets (pick exactly 5; always `#constructionindia`; rotate, don't paste the same 5 every day):**
+- Audience: `#siteengineer` `#civilengineering` `#architects` `#projectmanager` `#constructionmanagement`
+- Topic: `#concrete` `#curing` `#rcc` `#plastering` `#waterproofing` `#qualitycontrol` `#snagging` `#rfi` `#shopdrawings`
+  `#submittals` `#constructiondrawings` `#mep` `#structuralengineering` `#interiorfinishing` `#sitelife`
+- Drop `#plavyn` (no one searches it) and generic tags (`#construction`, `#productivity`, `#iphone`, `#kanban`).
+
+**Collab posts:** `create_image_post`, `create_carousel_post` support `collaborators` (≤3 usernames, they must accept). Only use
+handles Kaushal lists in a queue entry's `collaborators` (an architect or consultant he works with). A collab carousel with an
+architect is the fastest way to reach architects' followers.
+
+**Trial Reels** (`trial_params` on `create_video_post`, shown only to non-followers) need 1,000+ followers — revisit then.
+
 ## Daily run
 
 1. Work from a clone of this repo (`lucifer3344/plavyn-social`), branch `main`.
@@ -40,7 +82,9 @@ Week to 2026-11-16: 1 follower. 13 image posts across two weeks reached 0 accoun
    Check each link returns HTTP 200 before posting. If a file is missing, render it:
    `npm i && node render.js content/<id>.json`, commit and push, then check again.
 4. Post the story: `create_story` with `image_url` = the story link.
-5. Post the feed post: `create_image_post` with `image_url` = the post link and `caption` = the entry's caption, exactly.
+5. Post the feed post: `create_image_post` with `image_url` = the post link, `caption` = the entry's caption, exactly, and
+   `alt_text` = the entry's `alt_text` if present (for carousels, pass it on the first item via `items`). If the entry has
+   `collaborators`, pass them too (only usernames Kaushal added himself — never invite accounts on our own).
    If the entry has `"type": "carousel"`, use `create_carousel_post` with `image_urls` = the links of `slides` (in order) instead.
 6. Write both media ids into the entry (`story_media_id`, `post_media_id`), commit
    `Posted <date>: <id>` and push.
@@ -59,8 +103,9 @@ Make 7 new days in the same style, then add them to `queue.json`:
   snags with verified close, RFIs, tasks list/board/schedule, checklists, submittals, team access, diary,
   planner, widgets, Microsoft sign-in, files in OneDrive/Google Drive). Never claim AI features, customers,
   pricing or numbers that aren't in the app.
-- Captions: hook line first, 2–4 short sentences, one call to action, 5–8 specific hashtags ending with
-  `#plavyn #constructionindia #siteengineer`.
+- Captions: hook line first (with a search keyword, see "Audience & competition"), 2–4 short sentences, one call to
+  action, **exactly 5 hashtags** (Instagram's cap since Dec 2025) chosen from the hashtag sets below, always including
+  `#constructionindia`. Add an `alt_text` to every new entry (one sentence, what the image shows + audience keywords).
 - Render with `node render.js content/<id>.json`, look at every image before queueing it (text must not
   overlap the screen, nothing cut off), commit and push.
 
@@ -98,10 +143,12 @@ Make 7 new days in the same style, then add them to `queue.json`:
     `capTop` moves the caption pill if it covers a highlight). Preview with `node reels/record.js preview 2,5,9 <id>` and look.
   - **cards**: `cards: [{at, title, body}]` — numbered tips/pain points, no phone. Good for site-craft tips and "your site
     runs on WhatsApp if…" style hooks. Bottom line defaults to "Save this · Follow @plavyn_1" (`cta` to change).
-- Mix per 7 reels: 3 demo, 3 site tips (cards), 1 site-pain (cards) (changed 2026-11-16, see Learnings). Don't reuse a reel id or repeat a
+- Mix per 7 reels: 3 demo, 3 site tips (cards), 1 site-pain (cards) (changed 2026-11-16, see Learnings); at least 2 of the 7
+  aimed at architects/consultants (see "Audience & competition"). Don't reuse a reel id or repeat a
   reel topic within 14 days. Headline = hook in the first second (a question or a problem, ≤ 7 words). 12–20 s long.
-- Reel captions: hook line, 2–3 short sentences, one call to action that asks for a follow, save, comment or tag,
-  4–6 specific hashtags ending with `#plavyn #constructionindia #siteengineer`.
+- Reel captions: hook line with a search keyword, 2–3 short sentences, one call to action — prefer a **send** ask
+  ("Send this to your site engineer / architect") since sends are Instagram's strongest non-follower signal; otherwise save,
+  comment or tag. **Exactly 5 hashtags** from the sets below, always including `#constructionindia` (check_reel.sh fails >5).
 - **Keep it real (honest content).** Every reel must be true to the app and to site practice:
   - Demo reels use only real app screenshots from `assets/screens/` / `assets/widgets/` — no mocked or edited UI, no features
     the app doesn't have, no fake data that looks like a real client or project.

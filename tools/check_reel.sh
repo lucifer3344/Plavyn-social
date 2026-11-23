@@ -30,4 +30,5 @@ cap=$(python3 -c "import json,sys;print(next((e.get('caption') or '' for e in js
 [ -n "$cap" ] || bad "no caption in reel_queue.json for $id"
 say "caption: ${#cap} chars, $(echo "$cap" | grep -o '#[A-Za-z0-9_]*' | wc -l) hashtags"
 [ ${#cap} -le 2200 ] || bad "caption over 2200 chars"
+nh=$(echo "$cap" | grep -o '#[A-Za-z0-9_]*' | wc -l); [ "$nh" -le 5 ] || bad "$nh hashtags - Instagram allows max 5"
 [ $fail = 0 ] && echo "OK: $id ready to post" ; exit $fail
