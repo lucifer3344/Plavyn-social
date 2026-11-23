@@ -7,8 +7,8 @@ Goal: grow followers. Reels reach non-followers; image posts mostly reach existi
 ## Learnings (from weekly reports — follow these; the Monday report updates them)
 Week to 2026-11-23: still 1 follower. **0 reels posted → total reach 0.** All 7 feed posts (incl. the c01 carousel) reached 0,
 for the third week running. Account reach for the whole week: 2.
-- **The evening reel run has no scheduled task.** Only the 9 AM daily-post task exists, so reels only went out when run by hand
-  (11-14, 11-15). Until a 7 PM task exists, nothing in `reel_queue.json` posts. Re-dated the 5 stuck reels to 11-24..11-28.
+- **The evening reel run had no scheduled task until 11-23.** Only the 9 AM daily-post task exists, so reels only went out when run by hand
+  (11-14, 11-15). Until a 7 PM task exists, nothing in `reel_queue.json` posts. Re-dated the 5 stuck reels to 11-23..11-27; the "Plavyn evening reel" scheduled task (6:42 PM IST daily) was created on 11-23.
 - **Daily run check:** after posting, look at `reel_queue.json`. If the newest reel with a `media_id` is more than 2 days old,
   or any reel dated before today has `media_id: null`, say so in the report and send a push notification
   ("reels stalled since <date>") — don't stay silent.
