@@ -75,11 +75,21 @@ Make 7 new days in the same style, then add them to `queue.json`:
    - Add a spec to `reels/clips.json` (`id: rc<NN>-<slug>`, `raw`, `mark`, `headline` with `<br><span class="t">…</span>`, `end`,
      optional `start`/`max` seconds), run `node reels/clip.js <id>`, look at frames of the output, write a caption, and insert
      the entry for today in `reel_queue.json`.
-3. Check the video and cover links return HTTP 200 (`https://raw.githubusercontent.com/lucifer3344/plavyn-social/main/reels/out/<id>.mp4`).
-4. Post: `create_video_post` with `video_url`, `cover_url` = the cover link, `caption` exactly, `share_to_feed: true`.
-5. Write `media_id`, commit `Reel <date>: <id>`, push. Retry at most once on failure.
-6. Reply to comments (below).
-7. If fewer than 3 future reels are left, make 7 new ones (see "Making reels"), queue them with captions, commit and push.
+3. **Pre-post check:** run `tools/check_reel.sh <id>`. It must print `OK`. It checks the mp4 has an H.264 9:16 video track
+   and an *audible* audio track (silent = mean volume below −50 dB fails), the cover exists, both public links return
+   HTTP 200, and the queue entry has a caption. If it fails, fix it (e.g. a silent raw clip: mix in a sound bed built with
+   `reels/audio.py`'s pad, re-run `clip.js`) or post the next queued reel instead and report why. Never post a silent reel.
+4. Post: `create_video_post` with `video_url`, `cover_url` = the cover link, `caption` exactly as in the queue,
+   `share_to_feed: true` (always — it puts the reel on the profile grid as well as the Reels tab).
+5. **Post-post check** (wait ~1 min, then `get_data`, connector `instagram`, fields `media_id`, `media_type`,
+   `media_product_type`, `media_caption`, `media_url`, `media_thumbnail_url`, `media_permalink`, filtered to the new media_id
+   over the last 2 days). Confirm: `media_type` = REELS, `media_url` is an mp4, `media_thumbnail_url` is set (cover attached),
+   `media_caption` equals the queued caption exactly (hashtags included), and there is a permalink. The API does not report
+   share-to-feed, so confirm the action was sent with `share_to_feed: true` and say so in the report. If any check fails,
+   report it and send a push notification with the permalink — never delete the post to "fix" it.
+6. Write `media_id` (and `permalink`), commit `Reel <date>: <id>`, push. Retry posting at most once on failure.
+7. Reply to comments (below).
+8. If fewer than 3 future reels are left, make 7 new ones (see "Making reels"), queue them with captions, commit and push.
 
 ### Making reels
 - App-screen reels: add an entry to `reels/reels.json` and run `reels/make.sh <id>` (needs `npm i`; writes `reels/out/<id>.mp4`
@@ -92,6 +102,15 @@ Make 7 new days in the same style, then add them to `queue.json`:
   reel topic within 14 days. Headline = hook in the first second (a question or a problem, ≤ 7 words). 12–20 s long.
 - Reel captions: hook line, 2–3 short sentences, one call to action that asks for a follow, save, comment or tag,
   4–6 specific hashtags ending with `#plavyn #constructionindia #siteengineer`.
+- **Keep it real (honest content).** Every reel must be true to the app and to site practice:
+  - Demo reels use only real app screenshots from `assets/screens/` / `assets/widgets/` — no mocked or edited UI, no features
+    the app doesn't have, no fake data that looks like a real client or project.
+  - No invented numbers, stats, results, customers, testimonials, "trusted by…", downloads or ratings. No AI features. No prices.
+  - No stock footage, AI-generated site images, or footage that isn't Kaushal's own; raw clips are captioned only with what
+    the clip actually shows (no implying it's a client's site unless notes.txt says so).
+  - Site tips: standard practice or a named code clause; say "follow your spec / consultant" where practice varies.
+  - Don't overpromise in CTAs (e.g. "a tip every day" only while a reel really posts daily).
+  - If a queued reel breaks any of these, don't post it: skip to the next, and report what's wrong (fixing a caption error is allowed).
 - Facts in tips must be standard practice or quoted from a named code (e.g. IS 456); when unsure, leave it out.
 - Look at preview frames of every new reel before queueing: text inside the frame, nothing hidden by the caption pill,
   and nothing important in the bottom 400 px (Instagram's caption covers it).
