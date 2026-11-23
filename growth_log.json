@@ -43,5 +43,40 @@
       "reels": 4
     },
     "notes": "First weekly log; no earlier follower count recorded. r4-rfi-on-record (dated 11-13) never posted. Moved today's reel to the cards format."
+  },
+  {
+    "date": "2026-11-23",
+    "week": "2026-11-17..2026-11-23",
+    "followers": 1,
+    "follows": 7,
+    "media_count": 40,
+    "posts_this_week": {
+      "images": 6,
+      "reels": 0,
+      "carousels": 1
+    },
+    "total_reach": 0,
+    "reel_reach": 0,
+    "image_reach": 0,
+    "carousel_reach": 0,
+    "account_reach_daily_sum": 2,
+    "reach_non_followers": 1,
+    "saves": 0,
+    "shares": 0,
+    "comments": 0,
+    "likes": 0,
+    "best": null,
+    "worst_reel": null,
+    "prev_week": {
+      "range": "2026-11-10..2026-11-16",
+      "followers": 1,
+      "total_reach": 44,
+      "reel_reach": 44,
+      "image_reach": 0,
+      "images": 7,
+      "reels": 2,
+      "note": "reel reach updated from 41 to 44 (r6 now 26, r5 18)"
+    },
+    "notes": "No reels posted this week: there is no scheduled task for the 7 PM reel run (only the 9 AM daily post task exists), so r8/r7/r10/r4/r9 sat unposted. All 7 feed posts incl. carousel c01 reached 0. Re-dated the 5 stuck reels to 2026-11-24..28, cards first."
   }
 ]

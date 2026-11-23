@@ -5,6 +5,18 @@ Every day: 9 AM IST one feed post (Saturdays: a carousel) and one story; 7 PM IS
 Goal: grow followers. Reels reach non-followers; image posts mostly reach existing followers (in Nov 2026 images reached ~0, reels 1–31).
 
 ## Learnings (from weekly reports — follow these; the Monday report updates them)
+Week to 2026-11-23: still 1 follower. **0 reels posted → total reach 0.** All 7 feed posts (incl. the c01 carousel) reached 0,
+for the third week running. Account reach for the whole week: 2.
+- **The evening reel run has no scheduled task.** Only the 9 AM daily-post task exists, so reels only went out when run by hand
+  (11-14, 11-15). Until a 7 PM task exists, nothing in `reel_queue.json` posts. Re-dated the 5 stuck reels to 11-24..11-28.
+- **Daily run check:** after posting, look at `reel_queue.json`. If the newest reel with a `media_id` is more than 2 days old,
+  or any reel dated before today has `media_id: null`, say so in the report and send a push notification
+  ("reels stalled since <date>") — don't stay silent.
+- **Image posts and carousels don't reach anyone yet** (0 reach across ~20 posts). Keep them for profile credibility, but
+  any new effort (new specs, new formats) goes to reels first. A carousel reach of 0 means carousels are not an exception.
+- Stale reels: when re-dating, put a cards reel first and alternate cards/demo; never place a reel on the same topic as that
+  day's feed post (e.g. r8 whatsapp moved off 11-23, the d16 whatsapp post day).
+
 Week to 2026-11-16: 1 follower. 13 image posts across two weeks reached 0 accounts; every account reached came from reels (all non-followers).
 - **Reels are the growth channel.** Never skip or delay the 7 PM reel. If a queued reel can't post, re-date it to the next free
   day instead of leaving it stuck in the past (r4 sat unposted for 3 days).
