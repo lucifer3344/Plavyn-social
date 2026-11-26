@@ -1,0 +1,16 @@
+{
+  "id": "c03-before-tiling-7",
+  "kind": "device",
+  "mark": "CHECKLISTS",
+  "headline": "Check it on site.\n*Snag what fails.*",
+  "sub": "Pass, Fail or N/A for each check. A failed check raises a snag in one tap.",
+  "media": {
+    "img": "assets/screens/18-checklist-detail.png",
+    "y0": 180,
+    "width": 720
+  },
+  "formats": [
+    "post"
+  ],
+  "headlineSize": 92
+}

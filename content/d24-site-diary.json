@@ -1,0 +1,17 @@
+{
+  "id": "d24-site-diary",
+  "kind": "list",
+  "mark": "SITE DIARY · DAILY",
+  "headline": "Site diary:\n*log these 6.*",
+  "headlineSize": 104,
+  "items": [
+    "Weather and working hours",
+    "Manpower on site, by trade",
+    "Work done, by floor and area",
+    "Materials received",
+    "Inspections and instructions given",
+    "Hold-ups, and why"
+  ],
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

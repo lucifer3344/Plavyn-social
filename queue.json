@@ -221,5 +221,85 @@
     "post_media_id": null,
     "story_media_id": null,
     "alt_text": "Carousel cover: before you plaster, 5 checks for site engineers. Conduits and boxes, chases filled, mesh on RCC-masonry joints, surface ready, dots and screeds."
+  },
+  {
+    "date": "2026-11-29",
+    "id": "d21-old-revision",
+    "post": "out/d21-old-revision-post.jpg",
+    "story": "out/d21-old-revision-story.jpg",
+    "caption": "Architects: was your site built off an old revision?\n\nIt usually starts with one superseded print still pinned up in the site office. In Plavyn every revision of a sheet stays together, the current one opens first, and you can compare two revisions in Overlay or Slide view.\n\nSend this to the site engineer on your project.\n\n#architects #constructiondrawings #siteengineer #qualitycontrol #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Plavyn drawings screen on an iPhone showing construction drawings with their revision and approval status, for architects and site engineers checking the current revision."
+  },
+  {
+    "date": "2026-11-30",
+    "id": "d22-brickwork",
+    "post": "out/d22-brickwork-post.jpg",
+    "story": "out/d22-brickwork-story.jpg",
+    "caption": "Site engineer tip: brickwork, 6 checks.\n\nSoak the bricks, use the mortar before it sets, fill every joint (about 10 mm), stagger the vertical joints, check level and plumb as you go, and keep the wall wet for at least 7 days. Follow your spec and consultant where they differ.\n\nSave this for your next masonry floor.\n\n#siteengineer #civilengineering #qualitycontrol #sitelife #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Site tip card for site engineers and civil engineering teams: brickwork, 6 checks, from soaking bricks to curing the wall for 7 days."
+  },
+  {
+    "date": "2026-12-01",
+    "id": "d23-rfi-consultant",
+    "post": "out/d23-rfi-consultant-post.jpg",
+    "story": "out/d23-rfi-consultant-story.jpg",
+    "caption": "Answering RFIs without 20 calls.\n\nFor architects and consultants: each RFI in Plavyn arrives as one question on record, addressed to you, with its status, open or answered. The site sees your answer in the same place, not in a call nobody wrote down.\n\nSend this to the consultant who gets your RFIs on WhatsApp.\n\n#architects #rfi #projectmanager #constructionmanagement #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Plavyn RFIs screen on an iPhone: RFIs addressed to the structural consultant and the architect, marked open or answered, for construction project teams."
+  },
+  {
+    "date": "2026-12-02",
+    "id": "d24-site-diary",
+    "post": "out/d24-site-diary-post.jpg",
+    "story": "out/d24-site-diary-story.jpg",
+    "caption": "Site diary: log these 6 every day.\n\nWeather and hours, manpower by trade, work done by floor, materials received, inspections and instructions, and hold-ups with the reason. When a dispute comes up months later, the diary is what you have.\n\nWhat else does your site diary record? Tell us in the comments.\n\n#siteengineer #constructionmanagement #projectmanager #sitelife #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Site diary checklist card for site engineers and project managers: six things to log every day on a construction site."
+  },
+  {
+    "date": "2026-12-03",
+    "id": "d25-schedule",
+    "post": "out/d25-schedule-post.jpg",
+    "story": "out/d25-schedule-story.jpg",
+    "caption": "Site engineer's week: what's due?\n\nPlavyn's Schedule view lines tasks up by due date, with overdue ones on top, so Monday's meeting starts with what's late, not with who remembers what.\n\nSend this to whoever runs your site meetings.\n\n#projectmanager #siteengineer #constructionmanagement #civilengineering #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Plavyn task schedule on an iPhone for construction management: overdue tasks on top, then tasks grouped by due date with owner and priority."
+  },
+  {
+    "date": "2026-12-04",
+    "id": "d26-why-plavyn",
+    "post": "out/d26-why-plavyn-post.jpg",
+    "story": "out/d26-why-plavyn-story.jpg",
+    "caption": "Why we're building Plavyn, a construction drawings app.\n\nSites argue over which drawing is current, snags get marked fixed without a check, RFIs get lost in calls, and tasks live in five WhatsApp groups. Plavyn puts drawings, snags, RFIs and tasks in one place, on the iPhone on site and the iPad in the site office.\n\nWhich of these happens on your project? Tell us in the comments.\n\n#architects #siteengineer #constructiondrawings #constructionmanagement #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Build in public card: why we're building Plavyn, a construction site app for architects and site engineers, listing common site problems with drawings, snags, RFIs and tasks."
+  },
+  {
+    "date": "2026-12-05",
+    "id": "c03-before-tiling",
+    "type": "carousel",
+    "slides": [
+      "out/c03-before-tiling-1-post.jpg",
+      "out/c03-before-tiling-2-post.jpg",
+      "out/c03-before-tiling-3-post.jpg",
+      "out/c03-before-tiling-4-post.jpg",
+      "out/c03-before-tiling-5-post.jpg",
+      "out/c03-before-tiling-6-post.jpg",
+      "out/c03-before-tiling-7-post.jpg"
+    ],
+    "post": "out/c03-before-tiling-1-post.jpg",
+    "story": "out/c03-before-tiling-1-story.jpg",
+    "caption": "Site engineer checklist: before you tile, 5 checks.\n\nTiles go on once. Waterproofing passed, pipes tested, slope to the drain, base level and plumb, layout and shade checked before the first tile. Follow your spec and consultant where they differ.\n\nSave this for your next finishing floor.\n\n#siteengineer #interiorfinishing #waterproofing #qualitycontrol #constructionindia",
+    "post_media_id": null,
+    "story_media_id": null,
+    "alt_text": "Carousel cover: before you tile, 5 checks for site engineers. Waterproofing passed, pipes tested, slope to the drain, base level and plumb, layout and shade."
   }
 ]

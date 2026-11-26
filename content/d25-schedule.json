@@ -1,0 +1,15 @@
+{
+  "id": "d25-schedule",
+  "kind": "device",
+  "mark": "TASKS · SCHEDULE",
+  "headline": "What's due\n*this week?*",
+  "headlineSize": 104,
+  "sub": "Schedule view lines tasks up by due date, with overdue ones on top.",
+  "media": {
+    "img": "assets/screens/08-tasks-schedule.png",
+    "y0": 0,
+    "width": 720
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

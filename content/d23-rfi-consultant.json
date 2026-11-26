@@ -1,0 +1,16 @@
+{
+  "id": "d23-rfi-consultant",
+  "kind": "device",
+  "mark": "RFIs · CONSULTANTS",
+  "headline": "Answer RFIs\n*without 20 calls.*",
+  "headlineSize": 96,
+  "sub": "Each question goes to the consultant on record, with its status: open or answered.",
+  "media": {
+    "img": "assets/screens/05-rfis.png",
+    "y0": 0,
+    "y1": 1300,
+    "width": 820
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}

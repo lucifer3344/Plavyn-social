@@ -1,0 +1,16 @@
+{
+  "id": "d21-old-revision",
+  "kind": "device",
+  "mark": "DRAWINGS · REVISIONS",
+  "headline": "Site built off\n*an old revision?*",
+  "headlineSize": 96,
+  "sub": "Every revision stays together and the current one opens first. Compare two revisions in Overlay or Slide view.",
+  "media": {
+    "img": "assets/screens/03-drawings.png",
+    "y0": 0,
+    "y1": 1150,
+    "width": 820
+  },
+  "storyMark": "NEW POST",
+  "storyFoot": "NEW ON THE FEED · @PLAVYN_1"
+}
